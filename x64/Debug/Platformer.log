@@ -1,2 +1,8 @@
-﻿  main.cpp
-  Platformer.vcxproj -> C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\Platformer.exe
+﻿  Component.cpp
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Component.h(6,11): error C2253: 'Component': pure specifier or abstract override specifier only allowed on virtual function
+  HealthComponent.cpp
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Component.h(6,11): error C2253: 'Component': pure specifier or abstract override specifier only allowed on virtual function
+  MoveComponent.cpp
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Component.h(6,11): error C2253: 'Component': pure specifier or abstract override specifier only allowed on virtual function
+  Window.cpp
+  Generating Code...

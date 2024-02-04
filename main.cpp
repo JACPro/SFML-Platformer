@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Window.h"
+#include "World.h"
 
 int main()
 {

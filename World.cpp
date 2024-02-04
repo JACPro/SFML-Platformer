@@ -6,7 +6,7 @@ World::World(Window& window)
 
 bool World::LoadResources()
 {
-	return false;
+	return true;
 }
 
 void World::Update(float deltaTime)

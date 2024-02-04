@@ -137,11 +137,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="HealthComponent.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MoveComponent.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="HealthComponent.h" />
+    <ClInclude Include="MoveComponent.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
