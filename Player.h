@@ -1,10 +1,9 @@
 #pragma once
 
-#include "Entity.h"
-#include "HealthComponent.h"
-#include "MoveComponent.h"
+#include "Actor.h"
+#include "PlayerInputComponent.h"
 
-class Player : public Entity, public HealthComponent, public MoveComponent
+class Player : public Actor, public PlayerInputComponent
 {
 public:
 	Player(World& world, const sf::Texture& texture);

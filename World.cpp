@@ -1,6 +1,7 @@
 #include "World.h"
 
 World::World(Window& window)
+	: mInputHandler(window.GetInputHandler())
 {
 }
 
@@ -19,4 +20,14 @@ void World::Render()
 
 void World::Shutdown()
 {
+}
+
+bool World::AddInputListener(InputComponent* listener)
+{
+	return mInputHandler.AddListener(listener);
+}
+
+void World::RemoveInputListener(InputComponent* listener)
+{
+	mInputHandler.RemoveListener(listener);
 }

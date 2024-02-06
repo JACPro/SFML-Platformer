@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "InputHandler.h"
 
 class Window
 {
@@ -13,8 +14,11 @@ public:
 
 	sf::RenderWindow& GetRenderWindow() { return mWindow; }
 	sf::RenderTexture& GetRenderTex() { return mRenderTex; }
+	InputHandler& GetInputHandler() { return mInputHandler; }
 	
 private:
 	sf::RenderWindow mWindow;
 	sf::RenderTexture mRenderTex;
+
+	InputHandler mInputHandler;
 };

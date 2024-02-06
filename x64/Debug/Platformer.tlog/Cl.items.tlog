@@ -1,3 +1,11 @@
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Actor.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\Actor.obj
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Component.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\Component.obj
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Entity.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\Entity.obj
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\HealthComponent.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\HealthComponent.obj
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\InputHandler.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\InputHandler.obj
 C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\main.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\main.obj
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\MoveComponent.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\MoveComponent.obj
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Player.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\Player.obj
+C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\PlayerInputComponent.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\PlayerInputComponent.obj
 C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\Window.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\Window.obj
 C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\World.cpp;C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\World.obj
