@@ -3,6 +3,8 @@
 #include "Window.h"
 
 class InputHandler;
+class Player;
+class Entity;
 
 class World
 {
@@ -19,5 +21,14 @@ public:
 	void RemoveInputListener(InputComponent* listener);
 
 private:
+	Window& mWindow;
+
+	void UpdateEntities(float deltaTime);
+	void RenderEntities();
+	void DestroyAllEntities();
+
 	InputHandler& mInputHandler;
+
+	Player* mPlayer = nullptr;
+	std::vector<Entity*> mEntities;
 };

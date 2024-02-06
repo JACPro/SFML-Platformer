@@ -3,10 +3,10 @@
   Entity.cpp
   HealthComponent.cpp
   InputHandler.cpp
-  main.cpp
   MoveComponent.cpp
   Player.cpp
   PlayerInputComponent.cpp
   World.cpp
+  main.cpp
   Generating Code...
   Platformer.vcxproj -> C:\Users\hepta\Documents\CPP\SFML Projects\Platformer\x64\Debug\Platformer.exe
