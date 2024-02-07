@@ -6,6 +6,10 @@ HealthComponent::HealthComponent(float maxHealth)
 {
 }
 
+void HealthComponent::Update(float deltaTime)
+{
+}
+
 void HealthComponent::ApplyDamage(float damage)
 {
 	mCurrHealth -= damage;

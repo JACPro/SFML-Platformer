@@ -9,7 +9,9 @@ Actor::Actor(World& world, const sf::Texture& texture)
 
 void Actor::Update(float deltaTime)
 {
+	MoveComponent::Update(deltaTime);
 	Entity::Update(deltaTime);
+
 }
 
 void Actor::Destroy()

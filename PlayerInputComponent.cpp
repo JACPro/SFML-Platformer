@@ -5,6 +5,11 @@ PlayerInputComponent::PlayerInputComponent(MoveComponent& moveComponent)
 {
 }
 
+void PlayerInputComponent::Update(float deltaTime)
+{
+
+}
+
 void PlayerInputComponent::HandleButtonPress(sf::Keyboard::Key button)
 {
 	switch (button)

@@ -9,7 +9,7 @@ Entity::Entity(World& world, const sf::Texture& texture)
 
 void Entity::Update(float deltaTime)
 {
-
+	mSprite.setPosition(mPosition);
 }
 
 void Entity::Render(sf::RenderTexture& rt)

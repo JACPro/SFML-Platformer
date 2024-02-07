@@ -146,6 +146,7 @@
     <ClCompile Include="MoveComponent.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerInputComponent.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
@@ -159,6 +160,7 @@
     <ClInclude Include="MoveComponent.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerInputComponent.h" />
+    <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>

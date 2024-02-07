@@ -5,3 +5,8 @@ MoveComponent::MoveComponent(bool hasGravity, sf::Vector2f& position)
 	, mPosition(position)
 {
 }
+
+void MoveComponent::Update(float deltaTime)
+{
+	mPosition += (mVelocity * deltaTime);
+}
