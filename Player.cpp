@@ -1,7 +1,8 @@
 #include "Player.h"
+#include "ResourceManager.h"
 
-Player::Player(World& world, const sf::Texture& texture)
-	: Actor(world, texture)
+Player::Player(World& world)
+	: Actor(world, world.GetResources().GetTextures().mPlayerTex)
 	, PlayerInputComponent(*this)
 {
 	world.AddInputListener(this);

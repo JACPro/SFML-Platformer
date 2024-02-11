@@ -17,7 +17,7 @@ public:
 
 	sf::Vector2f& GetPosition() { return mPosition; }
 
-private:
+protected:
 	World& mWorld;
 	sf::Sprite mSprite;
 

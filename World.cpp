@@ -7,19 +7,36 @@ World::World(Window& window)
 {
 }
 
-bool World::LoadResources()
+bool World::Load()
 {
+	if (!mResourceManager.Load())
+	{
+		return false;
+	}
+
+	mPlayer = SpawnEntity<Player>();
+	mCameraPos = mPlayer->GetPosition();
+	
 	return true;
 }
 
 void World::Update(float deltaTime)
 {
 	UpdateEntities(deltaTime);
+	UpdateCamera(deltaTime);
 }
 
 void World::Render()
 {
 	RenderEntities();
+
+	sf::Sprite fullScreenSprite(GetRenderTex().getTexture());
+
+	const sf::Vector2f& viewSize = mWindow.GetRenderWindow().getView().getSize();
+	fullScreenSprite.setOrigin(viewSize * 0.5f);
+	fullScreenSprite.setScale(sf::Vector2f(1.0f, -1.0f));
+
+	mWindow.GetRenderWindow().draw(fullScreenSprite);
 }
 
 void World::Shutdown()
@@ -89,7 +106,7 @@ void World::RenderEntities()
 	{
 		if (entity != nullptr)
 		{
-			entity->Render(mWindow.GetRenderTex());
+			entity->Render(GetRenderTex());
 		}
 	}
 }
@@ -102,4 +119,12 @@ void World::DestroyAllEntities()
 	}
 
 	mEntities.clear();
+}
+
+void World::UpdateCamera(float deltaTime)
+{
+	if (mPlayer != nullptr)
+	{
+		mCameraPos = mPlayer->GetPosition();
+	}
 }

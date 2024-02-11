@@ -5,6 +5,7 @@ Entity::Entity(World& world, const sf::Texture& texture)
 	, mSprite(texture)
 	, mEnabled(true)
 {
+	mSprite.setOrigin(sf::Vector2f(texture.getSize()) * 0.5f);
 }
 
 void Entity::Update(float deltaTime)

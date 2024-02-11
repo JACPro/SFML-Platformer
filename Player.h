@@ -6,7 +6,7 @@
 class Player : public Actor, public PlayerInputComponent
 {
 public:
-	Player(World& world, const sf::Texture& texture);
+	Player(World& world);
 
 	void Update(float deltaTime) override;
 

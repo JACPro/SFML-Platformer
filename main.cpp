@@ -10,7 +10,7 @@ int main()
 	Window	  window(1920, 1080, "SFML PLATFORMER");
 	World world(window);
 
-	if (world.LoadResources())
+	if (world.Load())
 	{
 		sf::Clock clock;
 
@@ -26,6 +26,10 @@ int main()
 
 			window.Display();
 		}
+	}
+	else
+	{
+		printf("ERROR: Failed to load resources\r\n");
 	}
 
 	world.Shutdown();
