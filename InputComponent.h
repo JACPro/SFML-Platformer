@@ -11,5 +11,7 @@ public:
 
 	virtual void Update(float deltaTime) override { }
 
-	virtual void HandleButtonPress(sf::Keyboard::Key button) = 0;
+	virtual void OnKeyDown(sf::Keyboard::Key key) = 0;
+	virtual void OnKeyUp(sf::Keyboard::Key key) = 0;
+	virtual void OnKeyHeld(sf::Keyboard::Key key) = 0;
 };

@@ -64,10 +64,6 @@ bool Window::HandleEvents()
 			{
 				mWindow.close();
 			}
-			else
-			{
-				mInputHandler.PressButton(event.key.code);
-			}
 		}
 	}
 

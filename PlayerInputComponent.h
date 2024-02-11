@@ -9,9 +9,11 @@ public:
 	PlayerInputComponent(MoveComponent& moveComponent);
 	virtual ~PlayerInputComponent() { }
 
-	virtual void Update(float deltaTime) override;
+	//virtual void Update(float deltaTime) override;
 
-	void HandleButtonPress(sf::Keyboard::Key button) override;
+	virtual void OnKeyDown(sf::Keyboard::Key key) override;
+	virtual void OnKeyUp(sf::Keyboard::Key key) override;
+	virtual void OnKeyHeld(sf::Keyboard::Key key) override;
 
 private:
 	MoveComponent& mMoveComponent;
