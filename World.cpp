@@ -22,7 +22,7 @@ bool World::Load()
 
 void World::Update(float deltaTime)
 {
-	mInputHandler.Update();
+	mInputHandler.Update(deltaTime);
 	UpdateEntities(deltaTime);
 	UpdateCamera(deltaTime);
 }

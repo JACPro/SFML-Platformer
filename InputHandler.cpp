@@ -27,10 +27,16 @@
 */
 bool InputHandler::AddListener(InputComponent* listener)
 {
+	if (listener == nullptr)
+	{
+		return false;
+	}
+
 	// Listener is not already present in the list
 	if (std::find(mListeners.begin(), mListeners.end(), listener) == mListeners.end())
 	{
 		mListeners.push_back(listener);
+		listener->SetButtonStatusRef(&mButtonStatus);
 		return true;
 	}
 	else
@@ -46,6 +52,11 @@ bool InputHandler::AddListener(InputComponent* listener)
 */
 void InputHandler::RemoveListener(InputComponent* listener)
 {
+	if (listener != nullptr)
+	{
+		listener->ClearButtonStatusRef();
+	}
+
 	mListeners.remove(listener);
 }
 
@@ -81,13 +92,18 @@ void InputHandler::CheckButton(sf::Keyboard::Key key, bool& keyDownBool)
 /*
 * @brief Check the status of each relevant button to see if we need to handle input
 */
-void InputHandler::Update()
+void InputHandler::Update(float deltaTime)
 {
-	CheckButton(sf::Keyboard::W, mWKeyDown);
-	CheckButton(sf::Keyboard::A, mAKeyDown);
-	CheckButton(sf::Keyboard::S, mSKeyDown);
-	CheckButton(sf::Keyboard::D, mDKeyDown);
-	CheckButton(sf::Keyboard::Space, mSpaceKeyDown);
+	CheckButton(sf::Keyboard::W, mButtonStatus.mWKeyDown);
+	CheckButton(sf::Keyboard::A, mButtonStatus.mAKeyDown);
+	CheckButton(sf::Keyboard::S, mButtonStatus.mSKeyDown);
+	CheckButton(sf::Keyboard::D, mButtonStatus.mDKeyDown);
+	CheckButton(sf::Keyboard::Space, mButtonStatus.mSpaceKeyDown);
+
+	for (InputComponent* ic : mListeners)
+	{
+		ic->Update(deltaTime);
+	}
 }
 
 /*
