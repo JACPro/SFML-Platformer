@@ -4,7 +4,7 @@
 #include "MoveComponent.h"
 #include "HealthComponent.h"
 
-class Actor : public Entity, public MoveComponent, public HealthComponent
+class Actor : public Entity
 {
 public: 
 	Actor(World& world, const sf::Texture& texture);
@@ -13,5 +13,10 @@ public:
 	virtual void Update(float deltaTime) override;
 	virtual void Destroy();
 
-private:
+	const MoveComponent& GetMoveComponent() const { return mMoveComponent; }
+	const HealthComponent& GetHealthComponent() const { return mHealthComponent; }
+
+protected:
+	MoveComponent mMoveComponent;
+	HealthComponent mHealthComponent;
 };

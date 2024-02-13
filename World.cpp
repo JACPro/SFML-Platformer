@@ -72,7 +72,7 @@ void World::UpdateEntities(float deltaTime)
 			Actor* actor = dynamic_cast<Actor*>(entity);
 			if (actor)				
 			{
-				if (actor->IsDead())
+				if (actor->GetHealthComponent().IsDead())
 				{
 					actor->Destroy();
 

@@ -11,9 +11,9 @@ public:
 	virtual void Update(float deltaTime) override;
 
 	void ApplyDamage(float damage);
-	bool IsDead();
-	float GetCurrHealth() { return mCurrHealth; }
-	float GetMaxHealth() { return mMaxHealth; }
+	const bool IsDead() const;
+	const float GetCurrHealth() const { return mCurrHealth; }
+	const float GetMaxHealth() const { return mMaxHealth; }
 
 private:
 	float mMaxHealth;

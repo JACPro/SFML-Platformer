@@ -3,9 +3,9 @@
 
 Player::Player(World& world)
 	: Actor(world, world.GetResources().GetTextures().mPlayerTex)
-	, PlayerInputComponent(*this)
+	, mPlayerInput(mMoveComponent)
 {
-	world.AddInputListener(this);
+	world.AddInputListener(&mPlayerInput);
 }
 
 void Player::Update(float deltaTime)

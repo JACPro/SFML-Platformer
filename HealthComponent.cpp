@@ -19,7 +19,7 @@ void HealthComponent::ApplyDamage(float damage)
 	}
 }
 
-bool HealthComponent::IsDead()
+const bool HealthComponent::IsDead() const
 {
 	return mCurrHealth < FLT_EPSILON;
 }
