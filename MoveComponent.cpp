@@ -1,4 +1,5 @@
 #include "MoveComponent.h"
+#include "MathFunctions.h"
 
 MoveComponent::MoveComponent(bool hasGravity, sf::Vector2f& position)
 	: mHasGravity(hasGravity)
@@ -13,5 +14,5 @@ void MoveComponent::Update(float deltaTime)
 
 void MoveComponent::HandleInput(sf::Vector2f input)
 {
-	mVelocity = input * mMoveSpeed;
+	mVelocity = Normalize(input) * mMoveSpeed;
 }
