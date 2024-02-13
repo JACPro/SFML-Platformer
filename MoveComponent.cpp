@@ -10,3 +10,8 @@ void MoveComponent::Update(float deltaTime)
 {
 	mPosition += (mVelocity * deltaTime);
 }
+
+void MoveComponent::HandleInput(sf::Vector2f input)
+{
+	mVelocity = input * mMoveSpeed;
+}

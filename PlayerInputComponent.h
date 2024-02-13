@@ -9,7 +9,7 @@ public:
 	PlayerInputComponent(MoveComponent& moveComponent);
 	virtual ~PlayerInputComponent() { }
 
-	//virtual void Update(float deltaTime) override;
+	virtual void Update(float deltaTime) override;
 
 	virtual void OnKeyDown(sf::Keyboard::Key key) override;
 	virtual void OnKeyUp(sf::Keyboard::Key key) override;
@@ -17,4 +17,5 @@ public:
 
 private:
 	MoveComponent& mMoveComponent;
+	sf::Vector2f mMoveVector; //the XY (e.g. WASD) input to pass to the MoveComponent
 };
